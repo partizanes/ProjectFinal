@@ -14,7 +14,9 @@
     <!-- Notes -->
     <link rel="stylesheet" href="<c:url value="${pageContext.request.contextPath}/resources/css/notes.css" />"
           type="text/css"/>
-    <title>Login</title>
+    <!-- Custom styles for this template -->
+    <link href="${pageContext.request.contextPath}/resources/css/sticky-footer.css" rel="stylesheet">
+    <title><spring:message code="Signin"/></title>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">

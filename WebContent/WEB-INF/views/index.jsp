@@ -13,6 +13,8 @@
     <!-- Notes -->
     <link rel="stylesheet" href="<c:url value="${pageContext.request.contextPath}/resources/css/notes.css" />"
           type="text/css"/>
+    <!-- Custom styles for this template -->
+    <link href="${pageContext.request.contextPath}/resources/css/sticky-footer.css" rel="stylesheet">
     <title><spring:message code="BrandName"/></title>
 </head>
 <body>
@@ -40,6 +42,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Это основная страница</h1>
+
         <h2>Используемые технологии:</h2>
         <h4>
             <ul>

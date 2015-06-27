@@ -13,7 +13,8 @@
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
     <!-- Notes -->
     <link rel="stylesheet" href="<c:url value="/resources/css/notes.css" />" type="text/css"/>
-
+    <!-- Custom styles for this template -->
+    <link href="${pageContext.request.contextPath}/resources/css/sticky-footer.css" rel="stylesheet">
     <title><spring:message code="Registration"/></title>
 </head>
 <body>
