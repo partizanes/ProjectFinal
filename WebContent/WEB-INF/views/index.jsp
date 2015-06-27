@@ -25,16 +25,30 @@
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/home">SecurityPage</a></li>
-            </ul>
+            <%@ include file="menu.jsp" %>
 
-            <form class="navbar-form navbar-right">
-                <button type="submit" class="btn btn-success" formaction="/login"><spring:message
-                        code="Signin"/></button>
-                <button type="submit" class="btn btn-success" formaction="/register"><spring:message
-                        code="Registration"/></button>
-            </form>
+            <c:if test="${empty username}">
+                <form class="navbar-form navbar-right">
+                    <button type="submit" class="btn btn-success" formaction="/login"><spring:message
+                            code="Signin"/></button>
+                    <button type="submit" class="btn btn-success" formaction="/register"><spring:message
+                            code="Registration"/></button>
+                </form>
+            </c:if>
+            <c:if test="${not empty username}">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="<c:url value='/j_spring_security_logout' />"><spring:message code="SignOut"/></a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle"
+                                            data-toggle="dropdown"><c:out value="${username}"/> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="<c:url value='/j_spring_security_logout' />"><spring:message code="SignOut"/></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </c:if>
+
         </div>
     </div>
 </nav>

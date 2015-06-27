@@ -24,9 +24,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/"> <spring:message code="BrandName"/> </a>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/home">SecurityPage</a></li>
-        </ul>
+        <%@ include file="menu.jsp" %>
         <form class="navbar-form navbar-right">
             <button type="submit" class="btn btn-success" formaction="/register"><spring:message code="Registration"/></button>
         </form>
@@ -43,7 +41,7 @@
                     <h3 class="panel-title"><spring:message code="Signin"/></h3>
                 </div>
                 <div class="panel-body">
-                    <form accept-charset="UTF-8" role="form" action="<c:url value='j_spring_security_check'/>"
+                    <form accept-charset="UTF-8" role="form" action="<c:url value='/j_spring_security_check'/>"
                           method="POST" id="login-form">
 
                         <!-- Display error messages -->

@@ -24,9 +24,7 @@
             <a class="navbar-brand" href="/"> <spring:message code="BrandName"/> </a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/home">SecurityPage</a></li>
-            </ul>
+            <%@ include file="menu.jsp" %>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="<c:url value='/j_spring_security_logout' />"><spring:message code="SignOut"/></a></li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -34,7 +32,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Profile</a></li>
                         <li class="divider"></li>
-                        <li><a href="<c:url value='/j_spring_security_logout' />">Sign Out</a></li>
+                        <li><a href="<c:url value='/j_spring_security_logout' />"><spring:message code="SignOut"/></a></li>
                     </ul>
                 </li>
             </ul>

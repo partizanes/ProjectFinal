@@ -23,9 +23,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/"> <spring:message code="BrandName"/> </a>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/home">SecurityPage</a></li>
-        </ul>
+        <%@ include file="menu.jsp" %>
         <form class="navbar-form navbar-right">
             <button type="submit" class="btn btn-success" formaction="/login"><spring:message code="Signin"/></button>
         </form>
