@@ -42,4 +42,34 @@ public class ApplicationController {
         return "index";
     }
 
+    @RequestMapping(value = {"/about"}, method = RequestMethod.GET)
+    public String getAboutPage(Model model, Principal principal) {
+
+        String username = principal.getName();
+        //UserEntity user = userDao.getUserByUsername(username);
+
+        logger.info("Home with user '" + username + "'");
+
+        model.addAttribute("username", username);
+
+        logger.info("getAboutPage");
+
+        return "about";
+    }
+
+    @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
+    public String getContactPage(Model model, Principal principal) {
+
+        String username = principal.getName();
+        //UserEntity user = userDao.getUserByUsername(username);
+
+        logger.info("Home with user '" + username + "'");
+
+        model.addAttribute("username", username);
+
+        logger.info("getContactPage");
+
+        return "contact";
+    }
+
 }
