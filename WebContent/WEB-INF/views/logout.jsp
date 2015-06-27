@@ -9,5 +9,8 @@
 <body>
 <h2><spring:message code="SignOutMsg"/></h2>
 <a href="<c:url value='/login' />">Login</a>
+
+<%@ include file="footer.jsp" %>
+
 </body>
 </html>

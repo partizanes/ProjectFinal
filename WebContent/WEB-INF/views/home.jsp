@@ -41,6 +41,9 @@
 
     <spring:message code="Welcome"/> <c:out value="${username}"/>!
 </div>
+
+<%@ include file="footer.jsp" %>
+
 <!-- jQuery -->
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
