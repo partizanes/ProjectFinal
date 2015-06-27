@@ -22,6 +22,9 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/"> <spring:message code="BrandName"/> </a>
         </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/home">SecurityPage</a></li>
+        </ul>
         <form class="navbar-form navbar-right">
             <button type="submit" class="btn btn-success" formaction="/register"><spring:message code="Registration"/></button>
         </form>
@@ -85,6 +88,6 @@
 <!-- Bootstrap -->
 <script src="<c:url value="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" />"></script>
 <!-- Notes -->
-<script src="<c:url value="/main.resources/js/notes.js" />"></script>
+<script src="<c:url value="${pageContext.request.contextPath}/resources/js/notes.js" />"></script>
 </body>
 </html>

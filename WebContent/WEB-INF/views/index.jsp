@@ -23,6 +23,9 @@
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/home">SecurityPage</a></li>
+            </ul>
 
             <form class="navbar-form navbar-right">
                 <button type="submit" class="btn btn-success" formaction="/login"><spring:message
@@ -36,7 +39,17 @@
 
 <div class="jumbotron">
     <div class="container">
-        <h1>This is main page!</h1>
+        <h1>Это основная страница</h1>
+        <h2>Используемые технологии:</h2>
+        <h4>
+            <ul>
+                <li>Spring MVC</li>
+                <li>Spring Security</li>
+                <li>Hibernate</li>
+                <li>Log4j</li>
+            </ul>
+        </h4>
+        <h5>Для посещения данной страницы авторизация не нужна</h5>
     </div>
 </div>
 
