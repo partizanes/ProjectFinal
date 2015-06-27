@@ -11,10 +11,12 @@
         <intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/index" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/home" access="ROLE_USER"/>
+        <intercept-url pattern="/about" access="ROLE_USER"/>
+        <intercept-url pattern="/contact" access="ROLE_USER"/>
 
         <form-login
                 login-page="/login"
-                default-target-url="/"
+                default-target-url="/home"
                 authentication-failure-url="/login?error"/>
         <logout logout-success-url="/login?logout"/>
     </http>
