@@ -20,14 +20,11 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <span class="navbar-brand"><spring:message code="BrandName"/></span>
+            <a class="navbar-brand" href="/"> <spring:message code="BrandName"/> </a>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="<c:url value='/login' />"><spring:message code="LoginMenu"/></a></li>
-            </ul>
-        </div>
-        <!--/.nav-collapse -->
+        <form class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-success" formaction="/login"><spring:message code="Signin"/></button>
+        </form>
     </div>
 </div>
 
