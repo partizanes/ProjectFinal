@@ -20,13 +20,11 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <span class="navbar-brand"><spring:message code="BrandName"/></span>
+            <a class="navbar-brand" href="/"> <spring:message code="BrandName"/> </a>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="<c:url value='/register' />"><spring:message code="Registration"/></a></li>
-            </ul>
-        </div>
+        <form class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-success" formaction="/register"><spring:message code="Registration"/></button>
+        </form>
         <!--/.nav-collapse -->
     </div>
 </div>
@@ -64,7 +62,7 @@
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="remember" type="checkbox" value="Remember Me"> Запомнить Меня
+                                    <input name="remember" type="checkbox" value="Remember Me"> Запомнить меня
                                 </label>
                             </div>
                             <spring:message code="LoginMenu" var="loginmenu"/>
@@ -77,6 +75,8 @@
         </div>
     </div>
 </div>
+
+<%@ include file="footer.jsp" %>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
