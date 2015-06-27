@@ -20,7 +20,7 @@ public class ApplicationController {
     @Autowired
     private IUserDao userDao;
 
-    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/home"}, method = RequestMethod.GET)
     public String getHomePage(Model model, Principal principal) {
 
         // get the active user
@@ -33,4 +33,13 @@ public class ApplicationController {
 
         return "home";
     }
+
+    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
+    public String getTestPage(Model model, Principal principal) {
+
+        logger.info("getIndexPage");
+
+        return "index";
+    }
+
 }
