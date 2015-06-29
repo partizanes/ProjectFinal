@@ -41,7 +41,8 @@
     </div>
 </div>
 <div class="container-fluid">
-
+    <h2>Security Page</h2>
+    <br/>
     <spring:message code="Welcome"/> <c:out value="${username}"/>!
 </div>
 
